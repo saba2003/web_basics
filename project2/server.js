@@ -84,7 +84,7 @@ application.use(notFoundRoutes)
 
 async function start() {
     try {
-        await mongoose.connect("mongodb+srv://Admin:Admin@applicationcluster.nreuz.mongodb.net/userDatabase1", {
+        await mongoose.connect("mongo account URI", {
             useNewUrlParser: true,
             useFindAndModify: false,
             useUnifiedTopology: true,
