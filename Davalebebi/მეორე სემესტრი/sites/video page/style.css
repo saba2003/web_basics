@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #111;
+}
+
+body::-webkit-scrollbar {
+    width: 0.9rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+
+
+/* MAIN-CONTENT */
+.main-content{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content::before{
+    content: '';
+    position: absolute;
+    right: 0; top: 0;
+    width: 400px;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+.main-content .video-box{
+    width: 80%;
+    aspect-ratio: 16/9;
+    padding: 120px 80px 60px;
+}
+
+.main-content video{
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+
+.main-content .textBox{
+    position: relative;
+    max-width: 1200px;
+    z-index: 2;
+    padding-bottom: 100px;
+    border-top: dashed 8px #6649b8;
+}
+.main-content .textBox h2{
+    color: #fff;
+    font-size: 3em;
+    padding: 10px 0;
+}
+
+.main-content .textBox p{
+    color: #fff;
+    font-size: 1.1em;
+    margin: 5px 0 25px;
+}
+.main-content .textBox a{
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    color: #111;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px){
+    header{
+        display: none;
+    }
+    .main-content{
+        justify-content: center;
+        padding: 0 20px;
+        flex-direction: column;
+    }
+    .main-content::before{
+        display: none;
+    }
+    .main-content .textBox{
+        max-width: 90%;
+    }
+    .main-content .textBox h2{
+        font-size: 1.5em;
+    }
+    .main-content .textBox a{
+        font-size: 0.9em;
+    }
+    .main-content .video-box{
+        width: 100%;
+        height: 100%;
+        margin: 40px 0 100px;
+        padding: 20px 10px 0;
+    }
+}

@@ -1,0 +1,232 @@
+/* default styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;800&display=swap');
+
+* {
+    margin: 0; padding: 0;
+}
+
+body{
+    margin: 0; padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+
+/* navigation styles */
+
+#navigation .navigation_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 70px;
+    background-color: #22242B;
+    padding: 0 200px;
+
+
+}#navigation .navigation_container .navigation_logo_text{
+    color: #E3E7EA;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#navigation .navigation_container .nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    list-style: none;
+    
+}
+#navigation .navigation_container .nav .nav_item{
+    margin: 0 15px;
+}
+
+#navigation .navigation_container .nav .nav_item a {
+    text-decoration: none;
+    color: #CBCFD2;
+}
+
+#navigation .navigation_container .nav .nav_item.active a {
+    font-weight: 800;
+    color: white;
+}
+
+#navigation .navigation_container .nav-contact-button{
+    width: 110px;
+    height: 35px;
+    border-radius: 50px;
+    border: none;
+    background-color: #038DAB;
+    color: white;
+    transition: 0.3s;
+}#navigation .navigation_container .nav-contact-button:hover{
+    background-color: #02d1ff;
+    cursor: pointer;
+} 
+
+#navigation .navigation_container .nav-hud-button{
+    font-size: 25px;
+    color: white;
+    display: none;
+}#navigation .navigation_container .nav-hud-button:hover{
+    cursor: pointer;
+}
+
+/* about styles */
+
+#about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background-color: #F4F6F9;
+    
+    padding: 0 200px;
+    height: 100vh;  
+    
+}#about .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+    
+    height: 25%;
+    width: 100%;
+}
+
+#about .container .left_container{
+    flex-basis: 40%;
+}
+#about .container .left_container .aboutUs_text{
+    color: #51B8E5;
+    font-weight: 600;
+    font-size: 19px;
+    margin: 0;
+    margin-bottom: 21px; 
+    padding-right: 10px; 
+
+    transform: translateY(-23px);
+
+}#about .container .left_container .title_text{
+    font-size: 30px;
+    
+    transform: translateY(-23px);
+}
+
+
+#about .container .right_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: 60%;
+}
+#about .container .right_container .top_text{
+    margin-bottom: 10px;
+    padding: 0 70px;
+}
+#about .container .right_container .bottom_text{
+    margin-bottom: 10px;
+    padding: 0 70px;
+}
+
+
+
+#about .container .right_container .read-more-button{
+    margin-left: 70px;
+    margin-top: 20px;
+    width: 160px;
+    height: 55px;
+    font-size: 19px;
+    border-radius: 50px;
+    border: none;
+    background-color: #07a0c2;
+    color: white;
+    transition: 0.3s;
+}#about .container .right_container .read-more-button:hover{
+    border: 2px solid #07a0c2;
+    background-color: white;
+    cursor: pointer;
+    color: #07a0c2;
+} 
+
+
+/* ----- Media Queries ------ */
+
+@media only screen and (max-width: 1300px) {
+    #about {
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    #about .container {
+        align-items: stretch;
+        height: 29%;
+    }
+
+    #about .container .left_container{
+        flex-basis: 100%;
+    }
+
+    #about .container .left_container .aboutUs_text{
+        transform: translateY(0);
+    }#about .container .left_container .title_text{
+        transform: translateY(0);
+    }
+    
+
+    #about .container .right_container{
+        flex-basis: 100%;
+    }
+
+    #about .container .right_container .top_text{
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    #about .container .right_container .bottom_text{
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    #about .container .right_container .read-more-button{
+        width: 110px;
+        height: 35px;
+        font-size: 14px;
+        margin: 0;
+    }
+
+}
+
+
+@media only screen and (max-width: 1100px) {
+    #navigation .navigation_container{
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    #navigation .navigation_container .nav{
+        display: none;
+    }
+    #navigation .navigation_container .nav-contact-button{
+        display: none;
+    }
+
+    #navigation .navigation_container .nav-hud-button{
+        display: inline-block;
+    }
+
+    #about{
+        padding: 0 30px;
+    }
+}
