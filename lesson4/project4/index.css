@@ -1,0 +1,100 @@
+/* body {
+    background-color: plum;
+}
+
+/* label {
+    color: blue;
+} */
+
+/* p{
+    color: yellow !important;
+}*/
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+.container .box1 h3{
+    letter-spacing: 20px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    border-right: 10px double black;
+    border-left: 10px double black;
+    border-bottom: 10px solid black;
+    border-top: 10px dotted black
+}
+
+.box1 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.parent {
+    background-color: orange;
+    padding: 20px;
+    width: 150px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+
+    /* margin 5px 10px 15px 20px; */
+
+    margin: 20px;
+
+    border: 5px solid black;
+
+    border-radius: 50%;
+    transition: 1s;
+
+
+    /* display: inline-block; */
+    display: block;
+}
+
+
+.child.red{
+    background-color: rgb(170, 43, 43);
+    transition: 1s;
+}.child.red:hover{
+    background-color: red;
+}
+
+
+.child.yellow{
+    background-color: rgb(182, 182, 31);
+}.child.yellow:hover{
+    background-color: yellow;
+}
+
+
+.child.green{
+    background-color: rgb(46, 172, 46);
+}.child.green:hover{
+    background-color: rgb(2, 255, 2);
+}
+
+.pole{
+    height: 400px;
+    width: 0;
+    margin: auto;
+    border: 10px solid black;
+}
+
+.ground{
+    margin: auto;
+    border: 10px solid black;
+    width: 100px;
+}
