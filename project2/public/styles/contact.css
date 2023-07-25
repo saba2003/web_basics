@@ -1,0 +1,211 @@
+.sec{
+    background: var(--bg);
+    padding: 100px;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec .content{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.mxw800p{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h3{
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+p{
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.contact{
+    background: var(--bg);
+}
+
+.contact h3,
+.contact p{
+    color: var(--text);
+}
+
+.contactForm{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.contactForm form{
+    width: 100%;
+}
+
+.contactForm .row100{
+    display: flex;
+    width: 100%;
+}
+
+.contactForm .row100 .inputBx50{
+    margin: 0 20px;
+    width: 50%;
+}
+
+.contactForm .row100 .inputBx100{
+    margin: 0 20px;
+    width: 100%;
+}
+
+.contactForm .row100 input,
+.contactForm .row100 textarea
+{
+    position: relative;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+
+    color: var(--text);
+    background: transparent;
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0;
+    resize: none;
+}
+
+.contactForm .row100 input:is(:focus),
+.contactForm .row100 textarea:is(:focus){
+    border-bottom-color: #ff8a00;
+}
+
+.contactForm .row100 textarea
+{
+    height: 100px;
+}
+
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder{
+    color: var(--text);
+}
+
+.contactForm .row100 input[type="submit"]
+{
+    background: #ac52ca;
+    color: var(--text);
+    max-width: 100px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.4s ease;
+    border: 2px solid #ac52ca;
+}
+
+.contactForm .row100 input[type="submit"]:hover
+{
+    background: transparent;
+}
+
+.sci{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.sci ul{
+    position: relative;
+    display: flex;
+}
+
+.sci ul li{
+    position: relative;
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.sci ul li a{
+    text-decoration: none;
+}
+
+.sci ul li a .fa{
+    font-size: 2.5em;
+    color: var(--text)
+}
+.sci ul li::before{
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    font-size: 2.5em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    display: tra;
+}
+.sci ul li:nth-child(1)::before{
+    content: '\f099';
+    color: #1da1f2;
+    /* border-bottom: 2px solid #1da1f2; */
+}
+
+.sci ul li:nth-child(2)::before{
+    content: '\f232';
+    color: #25d366;
+    /* border-bottom: 2px solid #25d366; */
+}
+.sci ul li:nth-child(3)::before{
+    content: '\f16a';
+    color: #ff0000;
+    /* border-bottom: 2px solid #ff0000; */
+}
+
+.sci ul li:hover::before{
+    height: 100%
+}
+
+
+@media (max-width: 992px)
+{
+    .sec{
+        padding: 100px 50px 50px 50px;
+    }
+
+    .stats{
+        padding-top: 250px;
+    }
+    .row100{
+        flex-direction: column;
+    }
+    .contactForm .row100 .inputBx50,
+    .contactForm .row100 .inputBx100{
+        width: 100%;
+        margin: 0;
+    }
+
+    .sci{
+        margin: 20px;
+    }
+
+    .sci ul li a i{
+        font-size: 24px;
+    }
+    
+    h3{
+        font-size: 36px;
+    }
+
+}

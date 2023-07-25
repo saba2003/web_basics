@@ -1,0 +1,84 @@
+<header>
+    {{!-- <img src="../public/images/logo.png" class="logo"> --}}
+    <img src="images/logo-fancy.svg" class="logo">
+    <h1><span class="auto-input"></span></h1>
+
+    <p>
+     - <span style="color: #5ec72d;">Node</span> |  
+      <span style="color: var(--yellow);">Blender</span> |
+      <span style="color: var(--blue);">Unity</span> -
+    </p>
+</header>
+
+<main>
+    <h3>Meet our Top Performers</h3>
+
+    <section class="card-list">
+
+            {{#if users}}
+
+                {{#each users}}
+                    <article class="card">
+                      <header class="card-header">
+                      <p>Sep 11th 2020</p>
+                      <h2>Never forget</h2>
+                      </header>
+              
+                      <div class="card-author">
+                      <a class="author-avatar" href="#">
+                          <img src="/images/uploads/users_profile_images/{{photo}}" />
+                      </a>
+                      <svg class="half-circle" viewBox="0 0 106 57">
+                          <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                      </svg>
+              
+                      <div class="author-name">
+                          <div class="author-name-prefix">{{profession}}</div>
+                          <p>{{name}}</p>
+                      </div>
+                      </div>
+
+                      <div class="tags">
+                      <a href="#">html</a>
+                      <a href="#">css</a>
+                      <a href="#">web-dev</a>
+                      </div>
+                    
+                    </article>
+                {{/each}}
+
+            {{else}} <p>Empty array</p>
+            {{/if}}
+
+            
+ 
+            <article class="card">
+              <header class="card-header">
+                <p>Sep 11th 2020</p>
+                <h2>Never forget</h2>
+              </header>
+      
+              <div class="card-author">
+                <a class="author-avatar" href="#">
+                  <img src="images/avatar.png" />
+                </a>
+                <svg class="half-circle" viewBox="0 0 106 57">
+                  <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                </svg>
+      
+                <div class="author-name">
+                  <div class="author-name-prefix">Author</div>
+                  <p>Jeff Delaney</p>
+                </div>
+              </div>
+
+              <div class="tags">
+                <a href="#">html</a>
+                <a href="#">css</a>
+                <a href="#">web-dev</a>
+              </div>
+              
+            </article>
+
+       </section>
+</main>

@@ -1,0 +1,133 @@
+<nav class = "blue darken-4 main-navbar">
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">
+            <i class="material-icons">widgets</i>
+        </a>
+        
+        {{!-- Hamburger logo --}}
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+
+        
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            
+            {{#if isAuth}}
+                {{#if is_home}}
+                <li class="active">
+                    <a class="waves-effect waves-light" href="/">Home</a>
+                </li>
+                {{else}}
+                    <li>
+                        <a class="waves-effect waves-light" href="/">Home</a>
+                    </li>
+                {{/if}}
+
+                {{#if is_create}}
+                    <li class="active">
+                        <a class="waves-effect waves-light" href="/create">Create</a>
+                    </li>
+                {{else}}
+                    <li>
+                        <a class="waves-effect waves-light" href="/create">Create</a>
+                    </li>
+                {{/if}}
+
+                <li class="waves-effect waves-light">
+                    <a href="/authentication/logout">Logout</a>
+                </li>
+                
+
+            {{else}}
+                {{#if is_login}}
+                <li class="active">
+                    <a class="waves-effect waves-light" href="/authentication/login">login</a>
+                </li>
+                {{else}}
+                    <li>
+                        <a class="waves-effect waves-light" href="/authentication/login">login</a>
+                    </li>
+                {{/if}}
+
+                {{#if is_registration}}
+                    <li class="active">
+                        <a class="waves-effect waves-light" href="/authentication/registration">registration</a>
+                    </li>
+                {{else}}
+                    <li>
+                        <a class="waves-effect waves-light" href="/authentication/registration">registration</a>
+                    </li>
+                {{/if}}
+            {{/if}}
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+
+    {{#if isAuth}}
+
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="/images/DrawerBackground.jpg">
+                </div>
+                
+                <a href="#user"><img class="circle" src="/images/uploads/users_profile_images/{{user.photo}}"></a>
+                <a href="#name"><span class="white-text name">{{user.first_name}}</span></a>
+                <a href="#email"><span class="white-text email">{{user.email}}</span></a>
+            </div>
+        </li>
+
+        {{#if is_home}}
+        <li class="active">
+            <a class="waves-effect waves-light" href="/">Home</a>
+        </li>
+        {{else}}
+            <li>
+                <a class="waves-effect waves-light" href="/">Home</a>
+            </li>
+        {{/if}}
+
+        {{#if is_create}}
+            <li class="active">
+                <a class="waves-effect waves-light" href="/create">Create</a>
+            </li>
+        {{else}}
+            <li>
+                <a class="waves-effect waves-light" href="/create">Create</a>
+            </li>
+        {{/if}}
+
+        <li class="waves-effect waves-light">
+            <a href="/authentication/logout">Logout</a>
+        </li>
+
+        {{else}}
+            {{#if is_login}}
+            <li class="active">
+                <a class="waves-effect waves-light" href="/authentication/login">login</a>
+            </li>
+            {{else}}
+                <li>
+                    <a class="waves-effect waves-light" href="/authentication/login">login</a>
+                </li>
+            {{/if}}
+
+            {{#if is_registration}}
+                <li class="active">
+                    <a class="waves-effect waves-light" href="/authentication/registration">registration</a>
+                </li>
+            {{else}}
+                <li>
+                    <a class="waves-effect waves-light" href="/authentication/registration">registration</a>
+                </li>
+            {{/if}}
+    {{/if}}
+
+
+    
+
+    
+    
+</ul>

@@ -1,0 +1,101 @@
+/* ============== DEFAULT STYLES ==============*/
+.material-icons {
+    color: white;
+}
+/* ============== DEFAULT STYLES END ==============*/
+
+
+/* ============== TODO STYLES ==============*/
+.todo{
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.todo span.completed{
+    text-decoration: line-through;
+}
+
+.todo label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #f3f3f3;
+    padding: 1rem;
+}
+
+.todo .delete{
+    position: absolute;
+    right: 90px;
+    bottom: 14px;
+
+}
+/* ============== TODO STYLES END ==============*/
+
+
+/* ============== NAVIGATION STYLES ==============*/
+.main-navbar {
+    padding-left: 2rem;
+}
+/* ============== NAVIGATION STYLES END ==============*/
+
+
+/* ============== AUTHENTICATION STYLES ==============*/
+.auth-box {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 !important;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.auth-image-box {
+    padding: 0 !important;
+}
+
+.auth-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.auth-form-title {
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.submit-button {
+    display: block;
+    margin: auto;
+}
+/* ============== AUTHENTICATION STYLES END ==============*/
+
+/* ========== Flash Messages Styles ========== */
+.error-flash-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.error-flash-text {
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.info-flash-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: cyan;
+    border-radius: 10px;
+}
+
+.info-flash-text {
+    color: black;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ========== Flash Messages End ========== */

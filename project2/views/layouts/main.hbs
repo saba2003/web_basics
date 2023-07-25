@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {{> head}}
+
+    <body>
+
+        <div id="preloader"></div>
+
+        {{#if isAuth}}
+        {{else}}
+            {{> navbar}}
+        {{/if}}
+        
+
+        <div class="container">
+            {{#if isAuth}}
+
+                {{> sideNav}}
+
+                <div class="user-main">
+                    {{{ body }}}
+                </div>
+                
+            {{else}}
+                {{{ body }}}
+            {{/if}}
+            
+        </div>
+
+        {{> scriptsFooter}}
+    
+    </body>
+
+</html>

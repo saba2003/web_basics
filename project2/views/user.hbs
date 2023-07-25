@@ -1,0 +1,106 @@
+<div class="userContainer">
+    <div class="user-head">
+
+        <div class="profile-info">
+
+            <div class="profile-img">
+                <img src="/images/uploads/users_profile_images/{{user.photo}}">
+            </div>
+
+            <div class="profile">
+                <span class="name">{{user.name}}</span>
+                <span class="profession">{{user.profession}}</span>
+                
+                <div id="hireBtn" class="button">
+                    <ion-icon class="ionIcon" name="create-outline"></ion-icon>
+                </div>
+            </div>
+
+        </div>
+
+        
+        
+        <ul class="menu">
+            <div class="toggle"> <ion-icon name="add-outline"></ion-icon> </div>
+
+            <li style="--i:0;" id="menuLI" class="active"><a href="#">
+                <ion-icon name="home-outline"></ion-icon>
+            </a></li>
+            <li style="--i:1;" id="menuLI"><a href="#">
+                <ion-icon name="person-outline"></ion-icon>
+            </a></li>
+            <li style="--i:2;" id="menuLI"><a href="#">
+                <ion-icon name="settings-outline"></ion-icon>
+            </a></li>
+            <li style="--i:3;" id="menuLI"><a href="#">
+                <ion-icon name="mail-outline"></ion-icon>
+            </a></li>
+            <li style="--i:4;" id="menuLI"><a href="#">
+                <ion-icon name="videocam-outline"></ion-icon>
+            </a></li>
+            <li style="--i:5;" id="menuLI"><a href="#">
+                <ion-icon name="key-outline"></ion-icon>
+            </a></li>
+            <li style="--i:6;" id="menuLI"><a href="#">
+                <ion-icon name="game-controller-outline"></ion-icon>
+            </a></li>
+            <li style="--i:7;" id="menuLI"><a href="#">
+                <ion-icon name="camera-outline"></ion-icon>
+            </a></li>
+            
+            <div class="indicator">
+                
+            </div>
+
+        </ul>  
+
+        <!-- popup box start -->
+        
+
+    </div>
+    
+    <div class="popup-outer">
+        <div class="popup-box">
+
+            <h1 class="top-text">Edit your Profile</h1>
+
+            <div class="profile-text">
+
+                <form action="/user/editUser" class="user-edit-form" method="POST" enctype="multipart/form-data">
+
+                    <div class="profile-img">
+                        <img src="/images/uploads/users_profile_images/{{user.photo}}">
+
+                        <label class="info-label">Edit Photo</label>
+                        <input type="file" name="photo" value="{{user.photo}}"/>
+                    </div>
+
+                    <div class="text">
+                        <label class="info-label">Edit Name</label>
+                        <input type="text" id="name" name="name" class="name" placeholder="Edit name" value="{{user.name}}"></input>
+                        
+                        <label class="info-label">Edit profession</label>
+                        <input type="text" id="profession" name="profession" class="profession" placeholder="Edit profession" value="{{user.profession}}"></input>                
+                    </div>
+
+                    <div class="button">
+                        <button type="reset" id="close" class="cancel">Cancel</button>
+                        <button type="submit" class="send">Edit</button>
+                    </div>
+
+                    <input type = "hidden" name="id" value="{{_id}}" />
+
+                </form>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="user-content">
+    
+    </div>
+
+</div>
+

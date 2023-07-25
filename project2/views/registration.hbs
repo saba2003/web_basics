@@ -1,0 +1,71 @@
+<div class="bodyClone">
+    <div class="login-container active">
+        <div class="forms">
+
+            <div class="form signup">
+                <img src="images/logo.png" class="logo">
+                <span class="title">Registration</span>
+
+                <form action="/registration" method="POST">
+                    <div class="input-field">
+
+                        <input id="name" type="text" name="name" 
+                        value = {{#if savedName.length}} {{savedName}} {{else}} "" {{/if}} 
+                        placeholder="Enter your name" required>
+
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        
+                        <input id="email" type="email" name="email" 
+                        value = {{#if savedmail.length}} {{savedmail}} {{else}} "" {{/if}}
+                        {{#if mailError}} style="border-bottom-color: red !important" {{else}} {{/if}}
+                        placeholder="Enter your email" required>
+
+                        <i class="uil uil-envelope icon" {{#if mailError}} style="color: red !important" {{else}} {{/if}}></i>
+                    </div>
+                    <div class="input-field">
+
+                        <input id="password" type="password" name="password" 
+                        value = {{#if savedpass.length}} {{savedpass}} {{else}} "" {{/if}}
+                        {{#if passError}} style="border-bottom-color: red !important" {{else}} {{/if}}
+                        class="password" placeholder="Create a password" required>
+
+                        <i class="uil uil-lock icon" {{#if passError}} style="color: red !important" {{else}} {{/if}}></i>
+                        
+                    </div>
+                    <div class="input-field">
+                        
+                        <input id="confirm_password" type="password" name="confirm_password" 
+                        value = {{#if savedpass1.length}} {{savedpass1}} {{else}} "" {{/if}} 
+                        {{#if passError}} style="border-bottom-color: red !important" {{else}} {{/if}}
+                        class="password" placeholder="Confirm the password" required>
+
+                        <i class="uil uil-lock icon" {{#if passError}} style="color: red !important" {{else}} {{/if}}></i>></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="sigCheck" required>
+                            <label for="sigCheck" class="text">Agree to terms and service</label>
+                        </div>
+                        
+                        <a href="/contact" class="text">Any queries?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Registrate">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="/login" class="text login-link">Sign in</a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
